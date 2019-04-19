@@ -1,13 +1,19 @@
-import { User } from "./model/user";
-import { Spaceship } from "./model/spaceship";
+import { User } from './model/user';
+import { Spaceship } from './model/spaceship';
+import { Role } from './model/role';
+
+export let rolelist: Role[] = [
+  new Role(0, 'Lord'),
+  new Role(1, 'Ogre'),
+  new Role(2, 'Princess')
+  //new Role(3, 'Fan')
+];
 
 export let users: User[] = [
-  new User(1, 'blake', 'pass', 'blake', 'admin'),
-  new User(2, 'Bradley', 'pass', 'Bradley'),
-  new User(3, 'Shahram', 'pass', 'Shahram'),
-  new User(4, 'Pj', 'pass', 'Pj'),
-  new User(5, 'Danae', 'pass', 'Danae'),
-  new User(6, 'Fred', 'pass', 'Fred'),
+  new User(1, 'TheLordQuad', 'imNotShort', 'Lord', 'Farquad','quadmeister@gmail.com', rolelist[0]),
+  new User(2, 'SwampOgre', 'onions', 'Shrek', 'theOgre','iloveonions@gmail.com',rolelist[1]),
+  new User(3, 'Princessxoxo','whereIsMyPrince','Princess','Fiona','iamstuckinatower@gmail.com', rolelist[2]),
+  new User(4, 'FantasyCharacters','weHaveNoWhereToGo', 'Fantasy','Characters', 'wewantourhomes@gmail.com', rolelist[3])
 ];
 
 export let spaceships: Spaceship[] = [
